@@ -1,0 +1,61 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql5-16ff5575def-59d77dad99cc3a": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - mysql_study(user)",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mysql_study",
+				"url": "jdbc:mysql://localhost:3306/mysql_study",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev"
+			}
+		},
+		"mysql5-170098a9986-16d958ce96296205": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - localhost",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mysql://localhost:3306/",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev",
+				"handlers": {}
+			}
+		},
+		"mysql5-17009a42fc3-54c98c4d279f6df1": {
+			"provider": "mysql",
+			"driver": "mysql5",
+			"name": "MySQL - native_jdbc_study(user)",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "native_jdbc_study",
+				"url": "jdbc:mysql://localhost:3306/native_jdbc_study",
+				"home": "C:\\Program Files\\MySQL\\MySQL Server 5.7",
+				"type": "dev",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}

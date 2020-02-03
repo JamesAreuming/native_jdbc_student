@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/c3p0-0.9.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/commons-dbcp2-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/commons-pool2-2.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/HikariCP-3.4.2.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/mchange-commons-java-0.2.19.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="D:/workspace_java/native_jdbc_student/libs/slf4j-api-1.7.30.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
