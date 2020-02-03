@@ -7,11 +7,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import department.test.dto.Department;
 
 //IMPLEMENT : 도구
 public class DepartmentDaoImpl implements DepartmentDao {
 	//DAO를 singleton pattern , 하나만 생성되도록 한다
+	private static Logger logger = LogManager.getLogger();
 	
 	private static final DepartmentDaoImpl instance = new DepartmentDaoImpl(); //static final
 	
@@ -28,6 +32,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 		List<Department> list = new ArrayList<Department>();
 		try(PreparedStatement pstmt = con.prepareStatement(sql);
 				ResultSet rs = pstmt.executeQuery()){
+				logger.trace(pstmt); // sysout 대신에
 			while(rs.next()) {
 				list.add(getDepartment(rs));
 			}	
@@ -43,7 +48,8 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			pstmt.setInt(1, department.getDeptNo());
 			pstmt.setString(2, department.getDeptName());
 			pstmt.setInt(3, department.getFloor());
-			System.out.println(pstmt);
+			//System.out.println(pstmt);
+			logger.trace(pstmt);
 			res = pstmt.executeUpdate();
 		}
 		return res;
@@ -58,7 +64,8 @@ public class DepartmentDaoImpl implements DepartmentDao {
 			pstmt.setString(1, department.getDeptName());
 			pstmt.setInt(2, department.getFloor());
 			pstmt.setInt(3, department.getDeptNo());
-			System.out.println(pstmt);
+			//System.out.println(pstmt);
+			logger.trace(pstmt);
 			res = pstmt.executeUpdate();
 		}
 		return res;
@@ -71,7 +78,8 @@ public class DepartmentDaoImpl implements DepartmentDao {
 		int res = -1;
 		try(PreparedStatement pstmt = con.prepareStatement(sql)){
 			pstmt.setInt(1, department.getDeptNo());
-			System.out.println(pstmt);
+			//System.out.println(pstmt);
+			logger.trace(pstmt);
 			res = pstmt.executeUpdate();
 		}
 		return res;
