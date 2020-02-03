@@ -16,12 +16,12 @@ import department.test.ui.DlgEmployee;
 import native_jdbc_student.ds.C3p0DataSource;
 import native_jdbc_student.ds.DBCPDataSource;
 import native_jdbc_student.ds.Hikari_DataSource;
-import native_jdbc_student.ds.Hikari_DataSource2;
+import native_jdbc_student.ds.MySqlDataSource;
 
 public class Main {
 	public static void main(String[] args) throws SQLException{
 		
-		try (Connection con = Hikari_DataSource2.getConnection();) {
+		try (Connection con = MySqlDataSource.getConnection();) {
 			//소속부서사원검색test(con);
 			DepartmentDao dao = DepartmentDaoImpl.getInstance();
 			//추가할 부서 정보

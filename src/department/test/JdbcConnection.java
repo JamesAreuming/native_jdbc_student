@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 import department.test.dto.Department;
 import native_jdbc_student.ds.DBCPDataSource;
 import native_jdbc_student.ds.Hikari_DataSource;
-import native_jdbc_student.ds.Hikari_DataSource2;
+import native_jdbc_student.ds.MySqlDataSource;
 
 public class JdbcConnection {
 
@@ -93,7 +93,7 @@ public class JdbcConnection {
 
 	private static void selectDepartment(String url, String user, String password) {
 		String selectSql = "select deptno, deptname, floor from department";
-		try (Connection con = Hikari_DataSource2.getConnection();){
+		try (Connection con = MySqlDataSource.getConnection();){
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(selectSql);
 			// 1. JDBC 드라이버 로드
